@@ -5,7 +5,7 @@ For the purpose of this data structure we will read string inputs from a text fi
 
 # . Insert a string to the tree in alphabetical order.
 
-# . Copy the string contents of the entire tree.
+# . Copy the contents of the entire tree.
 
 # . Retrieve all instances of a key input.
 
