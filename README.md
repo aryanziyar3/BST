@@ -3,7 +3,7 @@ This is a recursive-based implementation of the Binary Search Tree data structur
 
 For the purpose of this data structure we will read string inputs from a text file and store them in a BST. The BST includes the following operations:
 
-# . Insert a string to the tree in alphabetical order (dublicates allowed).
+# . Insert a string to the tree in alphabetical order.
 
 # . Copy the string contents of the entire tree.
 
