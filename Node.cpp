@@ -38,13 +38,13 @@ int Node::set_data(const string &input)
 }
 
 //
-Node *&Node::get_left()
+Node *&Node::get_left() const
 {
     return left;
 }
 
 //
-Node *&Node::get_right()
+Node *&Node::get_right() const
 {
     return right;
 }
