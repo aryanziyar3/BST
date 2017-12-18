@@ -1,7 +1,7 @@
 # BST
 This is a recursive-based implementation of the Binary Search Tree data structure. It is used to store string inputs from a text file in alphabetical order.
 
-For the purpose of this data structure, we will read string inputs from a text file and store them in a BST. The BST includes the following operations:
+For the purpose of this data structure, we will start by read string inputs from a text file and store them in a BST. The BST includes the following operations:
 
 . Copy the contents of the entire tree.
 
@@ -22,10 +22,10 @@ For the purpose of this data structure, we will read string inputs from a text f
 # The sprints of this project to its completion is as follow:
 
 # V1*: 
-implement the basic structure of the data structure and support all the previous functions.
+Implement a basic structure of the data structure and ensure the support of all previous functions.
 # V2*:
-overload operators wherever possible and commit all the changes.
+Overload operators wherever possible and commit all the changes.
 # V3*:
-use const references wherever possible and commit all the changes.
+Use const references wherever possible and commit all the changes.
 # V4*: 
-switch the entire data structure to a template form and commit all the changes.
+Switch the entire data structure and its functionality into a template form and commit all the changes.
