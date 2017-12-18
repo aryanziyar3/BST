@@ -19,7 +19,7 @@ For the purpose of this data structure, we will read string inputs from a text f
 
 A makefile is used to run the program.
 
-# The stages (sprints) of this project to its completion is as follow:
+# The sprints of this project to its completion is as follow:
 
 # V1*: 
 implement the basic structure of the data structure and support all the previous functions.
