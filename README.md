@@ -21,7 +21,11 @@ A makefile is used to run the program.
 
 The stages (sprints) of this project to its completion is as follow:
 
-V1*: implement the basic structure of the data structure and support all the previous functions.
-V2*: overload operators wherever possible and commit all the changes.
-V3*: use const references wherever possible and commit all the changes.
-V4*: switch the entire data structure to a template form and commit all the changes.
+# V1*: 
+implement the basic structure of the data structure and support all the previous functions.
+# V2*:
+overload operators wherever possible and commit all the changes.
+# V3*:
+use const references wherever possible and commit all the changes.
+# V4*: 
+switch the entire data structure to a template form and commit all the changes.
