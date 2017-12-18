@@ -1,52 +1,71 @@
 
 #include "Node.h"
 
-//
-Node::Node()
+//default constructor - initilizes local data members
+Node::Node() : left(NULL), right(NULL)
 {
 }
 
-//
-Node::Node(const Node *&original)
+//copy constructor - calls the copy function
+Node::Node(Node *&original)
 {
     copy(original);
 }
 
-//
+//destructor - sets the deleted Nodes to NULL
 Node::~Node()
 {
+    left = NULL;
+    right = NULL;
 }
 
-//
-int Node::copy(const Node *&original)
+//copy function - creates a hard copy of the passed Node object into this Node object
+int Node::copy(Node *&original)
 {
-
-    return 0;
+    if (original == NULL)
+        return 0;
+    this->data = original->data;
+    this->left = original->left;
+    this->right = original->right;
+    return 1;
 }
 
-//
-int Node::compare(const string &input)
+//compare function - compares the current data string with the one being passed
+int Node::compare(string &input)
 {
-
-    return 0;
+    if (input <= this->data)
+        return 0; //go left
+    return 1;     //go right
 }
 
-//
-int Node::set_data(const string &input)
+//set function - sets this data string to match the one being passed
+int Node::set_data(string &input)
 {
-    return 0;
+    unsigned int length = input.length();
+    if (length)
+        this->data = input;
+    return length;
 }
 
-//
-Node *&Node::get_left() const
+//get function - returns a pointer of this left Node
+Node *&Node::get_left()
 {
-    return left;
+    return this->left;
 }
 
-//
-Node *&Node::get_right() const
+//get function - returns a pointer of this right Node
+Node *&Node::get_right()
 {
-    return right;
+    return this->right;
+}
+
+//display function - prints out the content of this node
+int Node::display()
+{
+    if (!this->data.length())
+        cout << "- EMPTY STRING IN THE NODE" << endl;
+    cout << "- " << data << endl;
+    return 1;
 }
 
 //endl
