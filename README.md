@@ -20,6 +20,7 @@ For the purpose of this data structure, we will read string inputs from a text f
 A makefile is used to run the program.
 
 The stages (sprints) of this project to its completion is as follow:
+
 V1*: implement the basic structure of the data structure and support all the previous functions.
 V2*: overload operators wherever possible and commit all the changes.
 V3*: use const references wherever possible and commit all the changes.
