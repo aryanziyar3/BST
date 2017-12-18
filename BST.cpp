@@ -1,54 +1,78 @@
 
 #include "BST.h"
 
-//
-BST::BST()
+//default constructor - initilizes local data members
+BST::BST() : root(NULL)
 {
 }
 
-//
-BST::BST(const BST &original)
+//copy constructor - calls the copy function
+BST::BST(BST &original)
 {
     copy(original);
 }
 
-//
+//destructor - calls the remove function
 BST::~BST()
 {
+    remove_all();
+}
+
+//copy function - creates a hard copy of the passed Node object into this Node object
+int BST::copy(BST &original)
+{
+    return copy(this->root, original.root);
+} //helper function
+int BST::copy(Node *&this_node, Node *&copy_node)
+{
+    if (!copy_node)
+        return 0;
+    this_node->copy(copy_node);
+    return copy(this_node->get_left(), copy_node->get_left()) + copy(this_node->get_right(), copy_node->get_right()) + 1;
+}
+
+//adding function - adds new string inputs to the BST in alphabatical order
+int BST::insert(string &input)
+{
+    return insert(this->root, input);
+} //helper function
+int BST::insert(Node *&this_node, string &input)
+{
+    if (!this_node)
+    {
+        this_node = new Node;
+        this_node->set_data(input);
+        return 1;
+    }
+    return (!this_node->compare(input)) ? insert(this_node->get_left(), input) : insert(this_node->get_right(), input);
 }
 
 //
-int BST::copy(const BST &original)
+int BST::retrieve(string &input, BST &original)
 {
     return 0;
 }
 
 //
-int BST::insert(const string &input)
+int BST::display(string &input)
 {
     return 0;
 }
 
-//
-const int BST::retrieve(const string &input, BST &original)
+//display function - prints out the entire contents of the BST
+int BST::display_all()
 {
-    return 0;
+    return display_all(this->root);
+} //helper function
+int BST::display_all(Node *&this_node)
+{
+    if (!this_node)
+        return 0;
+    return display_all(this_node->get_left()) + this_node->display() + display_all(this_node->get_right());
 }
 
 //
-const int BST::display(const string &input)
-{
-    return 0;
-}
-
-//
-const int BST::display_all()
-{
-    return 0;
-}
-
-//
-int BST::remove(const string &input)
+int BST::remove(string &input)
 {
     return 0;
 }

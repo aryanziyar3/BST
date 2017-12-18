@@ -9,13 +9,14 @@ class Node
 {
   public:
     Node();
-    Node(const Node *&);
+    Node(Node *&);
     ~Node();
-    int copy(const Node *&);
-    int compare(const string &);
-    int set_data(const string &);
+    int copy(Node *&);
+    int compare(string &);
+    int set_data(string &);
     Node *&get_left();
     Node *&get_right();
+    int display();
 
   private:
     string data;

@@ -3,22 +3,27 @@
 #define BST_H
 #include "Node.h"
 
-class BST
+class BST : public Node
 {
   public:
     BST();
-    BST(const BST &);
+    BST(BST &);
     ~BST();
-    int copy(const BST &);
-    int insert(const string &);
-    const int retrieve(const string &, BST &);
-    const int display(const string &);
-    const int display_all();
-    int remove(const string &);
+    int copy(BST &);
+
+    int insert(string &);
+    int retrieve(string &, BST &);
+    int display(string &);
+    int display_all();
+    int remove(string &);
     int remove_all();
 
   private:
     Node *root;
+
+    int copy(Node *&, Node *&);
+    int insert(Node *&, string &);
+    int display_all(Node *&);
 };
 
 #endif
